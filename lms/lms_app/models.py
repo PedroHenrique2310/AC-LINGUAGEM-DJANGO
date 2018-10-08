@@ -100,7 +100,7 @@ class DisciplinaOfertada(models.Model):
         ofertada.professor = DisciplinaOfertada.objects.filter(curso=self.professor)
         ofertada.disciplina = DisciplinaOfertada.objects.filter(curso=self.disciplina)
 
-        if len(ofertada.curso) >0 and len(ofertada.ano) > 0 and len(ofertada.semestre) > 0 and len(ofertada.turma) > 0 and len(ofertada.professor) > 0 and len(ofertada.professor) > 0:
+        if len(ofertada.curso) >0 and len(ofertada.ano) > 0 and len(ofertada.semestre) > 0 and len(ofertada.turma) > 0 and len(ofertada.professor) > 0 and len(ofertada.disciplina) > 0:
             raise Exception('Disciplina já cadastrada')
         super(DisciplinaOfertada,self).save()
 
