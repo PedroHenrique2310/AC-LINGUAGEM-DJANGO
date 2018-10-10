@@ -81,7 +81,7 @@ class DisciplinaOfertada(models.Model):
         if self.curso == '':
             raise Exception('curso não informado !!')
         ofertada.curso = DisciplinaOfertada.objects.filter(curso=self.curso)
-        if len(ofertada.curso) not 'ADS' or not 'SI' or not 'BD':
+        if len(ofertada.curso) and not 'ADS' or not 'SI' or not 'BD':
             raise Exception('curso não existente!!')
         super(DisciplinaOfertada,self).save()
 
